@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66C6694E1A22B0AE00BE9967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C6694D1A22B0AE00BE9967 /* main.m */; };
+		66C669511A22B0AE00BE9967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669501A22B0AE00BE9967 /* AppDelegate.m */; };
+		66C669541A22B0AE00BE9967 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669531A22B0AE00BE9967 /* ViewController.m */; };
+		66C669571A22B0AE00BE9967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C669551A22B0AE00BE9967 /* Main.storyboard */; };
+		66C669591A22B0AE00BE9967 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C669581A22B0AE00BE9967 /* Images.xcassets */; };
+		66C6695C1A22B0AE00BE9967 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C6695A1A22B0AE00BE9967 /* LaunchScreen.xib */; };
+		66C669681A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669671A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m */; };
+		66C669781A22B0E200BE9967 /* HourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669741A22B0E200BE9967 /* HourViewController.m */; };
+		66C669791A22B0E200BE9967 /* MinutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669761A22B0E200BE9967 /* MinutesViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66C669621A22B0AE00BE9967 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66C669401A22B0AE00BE9967 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66C669471A22B0AE00BE9967;
+			remoteInfo = PeekInspiredTimePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66C669481A22B0AE00BE9967 /* PeekInspiredTimePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekInspiredTimePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C6694C1A22B0AE00BE9967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C6694D1A22B0AE00BE9967 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66C6694F1A22B0AE00BE9967 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		66C669501A22B0AE00BE9967 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		66C669521A22B0AE00BE9967 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		66C669531A22B0AE00BE9967 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		66C669561A22B0AE00BE9967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66C669581A22B0AE00BE9967 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66C6695B1A22B0AE00BE9967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		66C669611A22B0AE00BE9967 /* PeekInspiredTimePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeekInspiredTimePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C669661A22B0AE00BE9967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C669671A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeekInspiredTimePickerTests.m; sourceTree = "<group>"; };
+		66C669731A22B0E200BE9967 /* HourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourViewController.h; sourceTree = "<group>"; };
+		66C669741A22B0E200BE9967 /* HourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourViewController.m; sourceTree = "<group>"; };
+		66C669751A22B0E200BE9967 /* MinutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinutesViewController.h; sourceTree = "<group>"; };
+		66C669761A22B0E200BE9967 /* MinutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66C669451A22B0AE00BE9967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C6695E1A22B0AE00BE9967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66C6693F1A22B0AE00BE9967 = {
+			isa = PBXGroup;
+			children = (
+				66C6694A1A22B0AE00BE9967 /* PeekInspiredTimePicker */,
+				66C669641A22B0AE00BE9967 /* PeekInspiredTimePickerTests */,
+				66C669491A22B0AE00BE9967 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66C669491A22B0AE00BE9967 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66C669481A22B0AE00BE9967 /* PeekInspiredTimePicker.app */,
+				66C669611A22B0AE00BE9967 /* PeekInspiredTimePickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66C6694A1A22B0AE00BE9967 /* PeekInspiredTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				66C6694F1A22B0AE00BE9967 /* AppDelegate.h */,
+				66C669501A22B0AE00BE9967 /* AppDelegate.m */,
+				66C669521A22B0AE00BE9967 /* ViewController.h */,
+				66C669531A22B0AE00BE9967 /* ViewController.m */,
+				66C669731A22B0E200BE9967 /* HourViewController.h */,
+				66C669741A22B0E200BE9967 /* HourViewController.m */,
+				66C669751A22B0E200BE9967 /* MinutesViewController.h */,
+				66C669761A22B0E200BE9967 /* MinutesViewController.m */,
+				66C669551A22B0AE00BE9967 /* Main.storyboard */,
+				66C669581A22B0AE00BE9967 /* Images.xcassets */,
+				66C6695A1A22B0AE00BE9967 /* LaunchScreen.xib */,
+				66C6694B1A22B0AE00BE9967 /* Supporting Files */,
+			);
+			path = PeekInspiredTimePicker;
+			sourceTree = "<group>";
+		};
+		66C6694B1A22B0AE00BE9967 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66C6694C1A22B0AE00BE9967 /* Info.plist */,
+				66C6694D1A22B0AE00BE9967 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66C669641A22B0AE00BE9967 /* PeekInspiredTimePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				66C669671A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m */,
+				66C669651A22B0AE00BE9967 /* Supporting Files */,
+			);
+			path = PeekInspiredTimePickerTests;
+			sourceTree = "<group>";
+		};
+		66C669651A22B0AE00BE9967 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66C669661A22B0AE00BE9967 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66C669471A22B0AE00BE9967 /* PeekInspiredTimePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66C6696B1A22B0AE00BE9967 /* Build configuration list for PBXNativeTarget "PeekInspiredTimePicker" */;
+			buildPhases = (
+				66C669441A22B0AE00BE9967 /* Sources */,
+				66C669451A22B0AE00BE9967 /* Frameworks */,
+				66C669461A22B0AE00BE9967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PeekInspiredTimePicker;
+			productName = PeekInspiredTimePicker;
+			productReference = 66C669481A22B0AE00BE9967 /* PeekInspiredTimePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66C669601A22B0AE00BE9967 /* PeekInspiredTimePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66C6696E1A22B0AE00BE9967 /* Build configuration list for PBXNativeTarget "PeekInspiredTimePickerTests" */;
+			buildPhases = (
+				66C6695D1A22B0AE00BE9967 /* Sources */,
+				66C6695E1A22B0AE00BE9967 /* Frameworks */,
+				66C6695F1A22B0AE00BE9967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66C669631A22B0AE00BE9967 /* PBXTargetDependency */,
+			);
+			name = PeekInspiredTimePickerTests;
+			productName = PeekInspiredTimePickerTests;
+			productReference = 66C669611A22B0AE00BE9967 /* PeekInspiredTimePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66C669401A22B0AE00BE9967 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Adam Cooper";
+				TargetAttributes = {
+					66C669471A22B0AE00BE9967 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					66C669601A22B0AE00BE9967 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 66C669471A22B0AE00BE9967;
+					};
+				};
+			};
+			buildConfigurationList = 66C669431A22B0AE00BE9967 /* Build configuration list for PBXProject "PeekInspiredTimePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66C6693F1A22B0AE00BE9967;
+			productRefGroup = 66C669491A22B0AE00BE9967 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66C669471A22B0AE00BE9967 /* PeekInspiredTimePicker */,
+				66C669601A22B0AE00BE9967 /* PeekInspiredTimePickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66C669461A22B0AE00BE9967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C669571A22B0AE00BE9967 /* Main.storyboard in Resources */,
+				66C6695C1A22B0AE00BE9967 /* LaunchScreen.xib in Resources */,
+				66C669591A22B0AE00BE9967 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C6695F1A22B0AE00BE9967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66C669441A22B0AE00BE9967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C669791A22B0E200BE9967 /* MinutesViewController.m in Sources */,
+				66C669541A22B0AE00BE9967 /* ViewController.m in Sources */,
+				66C669511A22B0AE00BE9967 /* AppDelegate.m in Sources */,
+				66C669781A22B0E200BE9967 /* HourViewController.m in Sources */,
+				66C6694E1A22B0AE00BE9967 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C6695D1A22B0AE00BE9967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C669681A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66C669631A22B0AE00BE9967 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66C669471A22B0AE00BE9967 /* PeekInspiredTimePicker */;
+			targetProxy = 66C669621A22B0AE00BE9967 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66C669551A22B0AE00BE9967 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66C669561A22B0AE00BE9967 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66C6695A1A22B0AE00BE9967 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66C6695B1A22B0AE00BE9967 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66C669691A22B0AE00BE9967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		66C6696A1A22B0AE00BE9967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66C6696C1A22B0AE00BE9967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PeekInspiredTimePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66C6696D1A22B0AE00BE9967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PeekInspiredTimePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66C6696F1A22B0AE00BE9967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PeekInspiredTimePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeekInspiredTimePicker.app/PeekInspiredTimePicker";
+			};
+			name = Debug;
+		};
+		66C669701A22B0AE00BE9967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PeekInspiredTimePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeekInspiredTimePicker.app/PeekInspiredTimePicker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66C669431A22B0AE00BE9967 /* Build configuration list for PBXProject "PeekInspiredTimePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C669691A22B0AE00BE9967 /* Debug */,
+				66C6696A1A22B0AE00BE9967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66C6696B1A22B0AE00BE9967 /* Build configuration list for PBXNativeTarget "PeekInspiredTimePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C6696C1A22B0AE00BE9967 /* Debug */,
+				66C6696D1A22B0AE00BE9967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66C6696E1A22B0AE00BE9967 /* Build configuration list for PBXNativeTarget "PeekInspiredTimePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C6696F1A22B0AE00BE9967 /* Debug */,
+				66C669701A22B0AE00BE9967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66C669401A22B0AE00BE9967 /* Project object */;
+}
