@@ -1,6 +1,12 @@
 PeekInspiredTimePicker
 ======================
 
-PeekInspiredTimePicker is a Time Picker inspired by the beautiful PEEK Calendar application available here: http://www.peekcalendar.com
+A Time Picker inspired by the beautiful PEEK Calendar application. 
 
-![drag](./images/sample.png)
+http://www.peekcalendar.com
+
+<div style="text-align:center" markdown="1">
+
+![PeekInspiredTimePicker](./images/sample.png)
+
+</div>
