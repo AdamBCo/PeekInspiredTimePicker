@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 @property (weak, nonatomic) IBOutlet UIButton *timeOfDaySwitch;
 
+@property NSInteger selectedHour;
+@property NSInteger selectedMinute;
 
 @end
 
@@ -55,15 +57,12 @@
 }
 
 -  (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"MinutesSegue"]) {
         MinutesViewController *minutesViewController = segue.destinationViewController;
         minutesViewController.delegate = self;
 
-    } else if ([segue.identifier isEqualToString:@"HourSegue"]){
         HourViewController *hoursViewController = segue.destinationViewController;
         hoursViewController.delegate = self;
 
-    }
 }
 
 - (IBAction)onTimeOfDayButtonPressed:(UIButton *)sender {
@@ -81,17 +80,34 @@
 
 
 -(void)minuteSelected:(NSString *)string{
+    self.selectedMinute = 0;
     NSLog(@"Minute: %@",string);
+    self.selectedMinute = string.integerValue;
 }
 
 -(void)hourSelected:(NSString *)string{
+    self.selectedHour = 0;
     NSLog(@"Hour: %@",string);
+    self.selectedHour = string.integerValue;
 }
 - (IBAction)onCloseButtonPressed:(id)sender {
     //[self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)onCheckButtonPressed:(id)sender {
-    //[self dismissViewControllerAnimated:YES completion:nil];
+
+
+    NSDateComponents *components = [NSDateComponents new];
+    components.hour = self.selectedHour;
+    components.minute = self.selectedMinute;
+
+    if (self.timeOfDaySwitch.tag == 1){
+        self.selectedHour += 12;
+        NSLog(@"PM %ld",(long)self.selectedHour);
+    }
+
+    NSDate *selectedDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+
+    NSLog(@"Selected Date: %@",selectedDate);
 }
 
 

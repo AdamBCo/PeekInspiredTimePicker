@@ -25,8 +25,9 @@
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     animation.duration = 0.4f;
     animation.autoreverses = YES;
-    animation.fromValue = (id) startColor.CGColor; // [NSNumber numberWithFloat:1.0];
-    animation.toValue = (id) destColor.CGColor; //[NSNumber numberWithFloat:0.10];
+    animation.fromValue = (UIColor *) startColor.CGColor;
+    animation.toValue = (UIColor *) destColor.CGColor;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self.layer addAnimation:animation forKey:@"backgroundColor"];
 }
 

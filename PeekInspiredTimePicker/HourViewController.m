@@ -12,7 +12,7 @@
 @interface HourViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *draggableLabel;
-@property (strong, nonatomic) IBOutletCollection(CustomHourLabel) NSArray *hourLabels;
+@property (strong, nonatomic) IBOutletCollection(HourLabel) NSArray *hourLabels;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topLayoutConstraint;
 @property NSDateFormatter *dateFormatter;
 
@@ -73,6 +73,7 @@
     [animation setFromValue:[NSValue valueWithCGPoint:self.draggableLabel.center]];
     [animation setToValue:[NSValue valueWithCGPoint:CGPointMake(self.draggableLabel.center.x, point.y)]];
     [animation setDuration:0.4f];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [self.draggableLabel.layer setPosition:CGPointMake(self.draggableLabel.center.x, point.y)];
     [self.draggableLabel.layer addAnimation:animation forKey:@"position"];
 
@@ -83,9 +84,8 @@
             [hourLabel backgroundColorAnimationFromColor:hourLabel.backgroundColor toColor:[UIColor greenColor] clearAnimationsFirst:YES];
 
             self.draggableLabel.text = hourLabel.text;
-            self.draggableLabel.center = hourLabel.center;
             self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
-            [self.delegate hourSelected:hourLabel.text];
+            [self.delegate hourSelected:self.draggableLabel.text];
         }
     }
     

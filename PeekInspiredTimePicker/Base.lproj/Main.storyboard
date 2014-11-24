@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-i1-J4F">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="544"/>
                                 <connections>
-                                    <segue destination="TNx-fO-rwO" kind="embed" id="X0F-E5-Gqa"/>
+                                    <segue destination="TNx-fO-rwO" kind="embed" identifier="HourSegue" id="X0F-E5-Gqa"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAg-s4-QmK"/>
@@ -203,7 +203,7 @@
                                 <color key="textColor" red="0.81403043379999995" green="0.81403043379999995" blue="0.81403043379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6e-iA-G8D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6e-iA-G8D">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.69411764705882351" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -390,7 +390,7 @@
                                 <color key="textColor" red="0.81403043379999995" green="0.81403043379999995" blue="0.81403043379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-01-3Z6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-01-3Z6">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.69411764705882351" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -497,7 +497,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="617" y="1156"/>
+            <point key="canvasLocation" x="608" y="1143"/>
         </scene>
     </scenes>
     <resources>

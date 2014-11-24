@@ -12,7 +12,7 @@
 @interface MinutesViewController ()<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *draggableLabel;
-@property (strong, nonatomic) IBOutletCollection(CustomMinuteLabel) NSArray *minuteLabels;
+@property (strong, nonatomic) IBOutletCollection(MinuteLabel) NSArray *minuteLabels;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 
@@ -66,6 +66,7 @@
     [animation setFromValue:[NSValue valueWithCGPoint:self.draggableLabel.center]];
     [animation setToValue:[NSValue valueWithCGPoint:CGPointMake(self.draggableLabel.center.x, point.y)]];
     [animation setDuration:0.4f];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [self.draggableLabel.layer setPosition:CGPointMake(self.draggableLabel.center.x, point.y)];
     [self.draggableLabel.layer addAnimation:animation forKey:@"position"];
 
@@ -76,9 +77,8 @@
             [minuteLabel backgroundColorAnimationFromColor:minuteLabel.backgroundColor toColor:[UIColor greenColor] clearAnimationsFirst:YES];
 
             self.draggableLabel.text = minuteLabel.text;
-            self.draggableLabel.center = minuteLabel.center;
             self.topConstraint.constant = minuteLabel.center.y - minuteLabel.frame.size.height;
-            [self.delegate minuteSelected:minuteLabel.text];
+            [self.delegate minuteSelected:self.draggableLabel.text];
         }
     }
 
