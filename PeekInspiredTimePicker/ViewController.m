@@ -95,19 +95,23 @@
 }
 - (IBAction)onCheckButtonPressed:(id)sender {
 
-
-    NSDateComponents *components = [NSDateComponents new];
-    components.hour = self.selectedHour;
+    NSDate *oldDate = [NSDate date];
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:oldDate];
     components.minute = self.selectedMinute;
 
-    if (self.timeOfDaySwitch.tag == 1){
-        self.selectedHour += 12;
-        NSLog(@"PM %ld",(long)self.selectedHour);
+    if (self.timeOfDaySwitch.tag == 0){
+        components.hour = self.selectedHour + 12;
+    } else {
+        components.hour = self.selectedHour;
     }
+    self.selectedDate = [calendar dateFromComponents:components];
 
-    NSDate *selectedDate = [[NSCalendar currentCalendar] dateFromComponents:components];
-
-    NSLog(@"Selected Date: %@",selectedDate);
+    NSTimeZone *timeZone = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [timeZone secondsFromGMTForDate: self.selectedDate];
+    NSDate *today =  [NSDate dateWithTimeInterval: seconds sinceDate: self.selectedDate];
+    NSLog(@"Selected Date: %@",today);
 }
 
 
