@@ -7,11 +7,12 @@
 //
 
 #import "MinutesViewController.h"
+#import "MinuteLabel.h"
 
 @interface MinutesViewController ()<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *draggableLabel;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *minuteLabels;
+@property (strong, nonatomic) IBOutletCollection(CustomMinuteLabel) NSArray *minuteLabels;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 
@@ -47,7 +48,7 @@
     float minuteUnit = ceil((float) minutes / 5.0);
     minutes = minuteUnit * 5.0;
 
-    for (UILabel *minuteLabel in self.minuteLabels) {
+    for (MinuteLabel *minuteLabel in self.minuteLabels) {
         if ([minuteLabel.text isEqualToString:@(minutes).stringValue]){
                 self.draggableLabel.text = minuteLabel.text;
                 self.topConstraint.constant = minuteLabel.center.y - minuteLabel.frame.size.height;
@@ -59,11 +60,23 @@
 
 -(IBAction)tap:(UITapGestureRecognizer *)gesture{
 
+
     CGPoint point = [gesture locationInView:self.view];
-    self.draggableLabel.center = CGPointMake(self.draggableLabel.center.x, point.y);
-    for (UILabel *minuteLabel in self.minuteLabels) {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    [animation setFromValue:[NSValue valueWithCGPoint:self.draggableLabel.center]];
+    [animation setToValue:[NSValue valueWithCGPoint:CGPointMake(self.draggableLabel.center.x, point.y)]];
+    [animation setDuration:0.4f];
+    [self.draggableLabel.layer setPosition:CGPointMake(self.draggableLabel.center.x, point.y)];
+    [self.draggableLabel.layer addAnimation:animation forKey:@"position"];
+
+    for (MinuteLabel *minuteLabel in self.minuteLabels) {
+
         if (CGRectContainsPoint(minuteLabel.frame, self.draggableLabel.center)){
+
+            [minuteLabel backgroundColorAnimationFromColor:minuteLabel.backgroundColor toColor:[UIColor greenColor] clearAnimationsFirst:YES];
+
             self.draggableLabel.text = minuteLabel.text;
+            self.draggableLabel.center = minuteLabel.center;
             self.topConstraint.constant = minuteLabel.center.y - minuteLabel.frame.size.height;
             [self.delegate minuteSelected:minuteLabel.text];
         }
@@ -81,7 +94,7 @@
     } else if (gesture.state == UIGestureRecognizerStateEnded ||
                gesture.state == UIGestureRecognizerStateFailed ||
                gesture.state == UIGestureRecognizerStateCancelled){
-        for (UILabel *minuteLabel in self.minuteLabels) {
+        for (MinuteLabel *minuteLabel in self.minuteLabels) {
             if (CGRectContainsPoint(minuteLabel.frame, self.draggableLabel.center)){
                 self.draggableLabel.text = minuteLabel.text;
                 self.topConstraint.constant = minuteLabel.center.y - minuteLabel.frame.size.height;

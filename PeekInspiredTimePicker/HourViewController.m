@@ -7,11 +7,12 @@
 //
 
 #import "HourViewController.h"
+#import "HourLabel.h"
 
 @interface HourViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *draggableLabel;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *hourLabels;
+@property (strong, nonatomic) IBOutletCollection(CustomHourLabel) NSArray *hourLabels;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topLayoutConstraint;
 @property NSDateFormatter *dateFormatter;
 
@@ -42,7 +43,7 @@
     if (hour > 12) {
         NSString *newValue = @(hour-12).stringValue;
 
-        for (UILabel *hourLabel in self.hourLabels) {
+        for (HourLabel *hourLabel in self.hourLabels) {
             if ([hourLabel.text isEqualToString:newValue]){
                 self.draggableLabel.text = hourLabel.text;
                 self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
@@ -51,7 +52,7 @@
         }
     } else if (hour < 12){
 
-        for (UILabel *hourLabel in self.hourLabels) {
+        for (HourLabel *hourLabel in self.hourLabels) {
             if ([hourLabel.text isEqualToString:@(hour).stringValue]){
                 self.draggableLabel.text = hourLabel.text;
                 self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
@@ -64,20 +65,30 @@
 }
 
 
-
-
 -(IBAction)tap:(UITapGestureRecognizer *)gesture{
 
-    CGPoint point = [gesture locationInView:self.view];
-    self.draggableLabel.center = CGPointMake(self.draggableLabel.center.x, point.y);
-        for (UILabel *hourLabel in self.hourLabels) {
-            if (CGRectContainsPoint(hourLabel.frame, self.draggableLabel.center)){
-                self.draggableLabel.text = hourLabel.text;
-                self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
-                [self.delegate hourSelected:hourLabel.text];
-            }
-        }
 
+    CGPoint point = [gesture locationInView:self.view];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    [animation setFromValue:[NSValue valueWithCGPoint:self.draggableLabel.center]];
+    [animation setToValue:[NSValue valueWithCGPoint:CGPointMake(self.draggableLabel.center.x, point.y)]];
+    [animation setDuration:0.4f];
+    [self.draggableLabel.layer setPosition:CGPointMake(self.draggableLabel.center.x, point.y)];
+    [self.draggableLabel.layer addAnimation:animation forKey:@"position"];
+
+    for (HourLabel *hourLabel in self.hourLabels) {
+
+        if (CGRectContainsPoint(hourLabel.frame, self.draggableLabel.center)){
+
+            [hourLabel backgroundColorAnimationFromColor:hourLabel.backgroundColor toColor:[UIColor greenColor] clearAnimationsFirst:YES];
+
+            self.draggableLabel.text = hourLabel.text;
+            self.draggableLabel.center = hourLabel.center;
+            self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
+            [self.delegate hourSelected:hourLabel.text];
+        }
+    }
+    
 }
 
 
@@ -90,9 +101,10 @@
     } else if (gesture.state == UIGestureRecognizerStateEnded ||
                gesture.state == UIGestureRecognizerStateFailed ||
                gesture.state == UIGestureRecognizerStateCancelled){
-        for (UILabel *hourLabel in self.hourLabels) {
+        for (HourLabel *hourLabel in self.hourLabels) {
             if (CGRectContainsPoint(hourLabel.frame, self.draggableLabel.center)){
                 self.draggableLabel.text = hourLabel.text;
+                self.draggableLabel.center = hourLabel.center;
                 self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
                 [self.delegate hourSelected:hourLabel.text];
             }

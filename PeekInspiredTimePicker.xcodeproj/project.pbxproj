@@ -16,6 +16,8 @@
 		66C669681A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669671A22B0AE00BE9967 /* PeekInspiredTimePickerTests.m */; };
 		66C669781A22B0E200BE9967 /* HourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669741A22B0E200BE9967 /* HourViewController.m */; };
 		66C669791A22B0E200BE9967 /* MinutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669761A22B0E200BE9967 /* MinutesViewController.m */; };
+		66C6697F1A237CDB00BE9967 /* MinuteLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C6697E1A237CDB00BE9967 /* MinuteLabel.m */; };
+		66C669821A237E8000BE9967 /* HourLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C669811A237E8000BE9967 /* HourLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		66C669741A22B0E200BE9967 /* HourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourViewController.m; sourceTree = "<group>"; };
 		66C669751A22B0E200BE9967 /* MinutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinutesViewController.h; sourceTree = "<group>"; };
 		66C669761A22B0E200BE9967 /* MinutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinutesViewController.m; sourceTree = "<group>"; };
+		66C6697D1A237CDB00BE9967 /* MinuteLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinuteLabel.h; sourceTree = "<group>"; };
+		66C6697E1A237CDB00BE9967 /* MinuteLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinuteLabel.m; sourceTree = "<group>"; };
+		66C669801A237E8000BE9967 /* HourLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourLabel.h; sourceTree = "<group>"; };
+		66C669811A237E8000BE9967 /* HourLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				66C669741A22B0E200BE9967 /* HourViewController.m */,
 				66C669751A22B0E200BE9967 /* MinutesViewController.h */,
 				66C669761A22B0E200BE9967 /* MinutesViewController.m */,
+				66C6697D1A237CDB00BE9967 /* MinuteLabel.h */,
+				66C6697E1A237CDB00BE9967 /* MinuteLabel.m */,
+				66C669801A237E8000BE9967 /* HourLabel.h */,
+				66C669811A237E8000BE9967 /* HourLabel.m */,
 				66C669551A22B0AE00BE9967 /* Main.storyboard */,
 				66C669581A22B0AE00BE9967 /* Images.xcassets */,
 				66C6695A1A22B0AE00BE9967 /* LaunchScreen.xib */,
@@ -232,7 +242,9 @@
 				66C669791A22B0E200BE9967 /* MinutesViewController.m in Sources */,
 				66C669541A22B0AE00BE9967 /* ViewController.m in Sources */,
 				66C669511A22B0AE00BE9967 /* AppDelegate.m in Sources */,
+				66C6697F1A237CDB00BE9967 /* MinuteLabel.m in Sources */,
 				66C669781A22B0E200BE9967 /* HourViewController.m in Sources */,
+				66C669821A237E8000BE9967 /* HourLabel.m in Sources */,
 				66C6694E1A22B0AE00BE9967 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +436,7 @@
 				66C6696D1A22B0AE00BE9967 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66C6696E1A22B0AE00BE9967 /* Build configuration list for PBXNativeTarget "PeekInspiredTimePickerTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +445,7 @@
 				66C669701A22B0AE00BE9967 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
