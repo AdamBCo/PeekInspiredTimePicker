@@ -7,6 +7,6 @@ http://www.peekcalendar.com
 
 <div style="text-align:center" markdown="1">
 
-![PeekInspiredTimePicker](./images/sample.png)
+![drag](./images/sample.png)
 
 </div>
