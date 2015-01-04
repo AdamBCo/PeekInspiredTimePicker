@@ -23,7 +23,7 @@
     }
 
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-    animation.duration = 0.4f;
+    animation.duration = 0.3f;
     animation.autoreverses = YES;
     animation.fromValue = (UIColor *) startColor.CGColor;
     animation.toValue = (UIColor *) destColor.CGColor;

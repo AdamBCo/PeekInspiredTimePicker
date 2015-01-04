@@ -60,7 +60,6 @@
 
 -(IBAction)tap:(UITapGestureRecognizer *)gesture{
 
-
     CGPoint point = [gesture locationInView:self.view];
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
     [animation setFromValue:[NSValue valueWithCGPoint:self.draggableLabel.center]];

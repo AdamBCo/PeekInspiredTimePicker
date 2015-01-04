@@ -39,12 +39,15 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitHour fromDate:now];
     NSInteger hour = [components hour];
+    
+    NSLog(@"Hour: %ld",(long)hour);
 
     if (hour > 12) {
-        NSString *newValue = @(hour-12).stringValue;
+        NSInteger newValue = hour-12;
 
         for (HourLabel *hourLabel in self.hourLabels) {
-            if ([hourLabel.text isEqualToString:newValue]){
+            NSLog(@"%ld == %ld",(long)hourLabel.text.integerValue, (long)hour);
+            if (hourLabel.text.integerValue == newValue){
                 self.draggableLabel.text = hourLabel.text;
                 self.topLayoutConstraint.constant = hourLabel.center.y - hourLabel.frame.size.height;
                 [self.delegate hourSelected:hourLabel.text];
